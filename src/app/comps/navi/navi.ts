@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';  // ✅ ADD THIS!
 
 @Component({
   selector: 'app-navi',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive],  // ✅ ADD THESE!
   templateUrl: './navi.html',
-  styleUrl: './navi.css',
+  styleUrl: './navi.css'
 })
-export class Navi {}
+export class Navi {
+}
