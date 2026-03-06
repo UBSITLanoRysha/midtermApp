@@ -3,7 +3,7 @@ import { Home } from './comps/home/home';
 import { Interpolation } from './databinding/interpolation/interpolation';
 import { PropertyBinding } from './databinding/property-binding/property-binding';
 import { EventBinding } from './databinding/event-binding/event-binding';
-import { TwoWayBinding } from './databinding/twoWay-binding/twoWay-binding';
+import { TwoWayBinding } from './databinding/twoway-binding/twoway-binding';
 import { AttributeBinding } from './databinding/attribute-binding/attribute-binding';
 import { ClassBinding } from './databinding/class-binding/class-binding';
 import { StyleBinding } from './databinding/style-binding/style-binding';
