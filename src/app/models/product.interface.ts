@@ -7,4 +7,3 @@ export interface Product {
   status: string;
   description: string;
 }
-

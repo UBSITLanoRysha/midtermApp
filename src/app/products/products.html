@@ -1,6 +1,6 @@
 <h2>Products List</h2>
 
-<table border="1">
+<table>
   <thead>
     <tr>
       <th>ID</th>
@@ -23,7 +23,6 @@
 </table>
 
 <div class="modal" *ngIf="showModal" (click)="closeModal()">
-
   <div class="modal-content" (click)="$event.stopPropagation()">
 
     <button (click)="closeModal()">Close</button>
@@ -31,14 +30,19 @@
     <h3>Product Details</h3>
 
     <div *ngIf="selectedProduct">
-      <p>ID: {{ selectedProduct.id }}</p>
-      <p>Name: {{ selectedProduct.name }}</p>
-      <p>Category: {{ selectedProduct.category }}</p>
-      <p>Price: {{ selectedProduct.price }}</p>
-      <p>Stock: {{ selectedProduct.stock }}</p>
-      <p>Status: {{ selectedProduct.status }}</p>
-      <p>Description: {{ selectedProduct.description }}</p>
+      <p><strong>ID:</strong> {{ selectedProduct.id }}</p>
+      <p><strong>Name:</strong> {{ selectedProduct.name }}</p>
+      <p><strong>Category:</strong> {{ selectedProduct.category }}</p>
+      <p><strong>Price:</strong> ₱{{ selectedProduct.price | number }}</p>
+      <p><strong>Stock:</strong> {{ selectedProduct.stock }}</p>
+      <p><strong>Status:</strong> {{ selectedProduct.status }}</p>
+      <p><strong>Description:</strong> {{ selectedProduct.description }}</p>
     </div>
 
   </div>
+</div>
+
+<hr/>
+<div class="container mt-4">
+  <router-outlet></router-outlet>
 </div>

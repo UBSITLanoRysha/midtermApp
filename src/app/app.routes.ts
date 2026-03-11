@@ -7,6 +7,8 @@ import { TwoWayBinding } from './databinding/twoway-binding/twoway-binding';
 import { AttributeBinding } from './databinding/attribute-binding/attribute-binding';
 import { ClassBinding } from './databinding/class-binding/class-binding';
 import { StyleBinding } from './databinding/style-binding/style-binding';
+import { ProductsListComponent } from './productList/productList';
+import { ProductDetails } from './productDetails/productDetails';
 
 export const routes: Routes = [
     { path: 'home', component: Home },
@@ -17,5 +19,7 @@ export const routes: Routes = [
     { path: 'attribute', component: AttributeBinding },
     { path: 'class', component: ClassBinding },
     { path: 'style', component: StyleBinding },
+    { path: 'plist', component: ProductsListComponent },
+    { path: 'plist/:id/details', component: ProductDetails },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

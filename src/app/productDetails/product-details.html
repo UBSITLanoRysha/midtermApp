@@ -1,0 +1,57 @@
+<div class="details-container">
+    <h2>Product Details</h2>
+  
+    <div *ngIf="product; else notFound">
+  
+      <div class="form-group">
+        <label>ID</label>
+        <input type="text" [value]="product.id" disabled />
+      </div>
+  
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="product.name" />
+      </div>
+  
+      <div class="form-group">
+        <label>Category</label>
+        <input type="text" [(ngModel)]="product.category" />
+      </div>
+  
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" [(ngModel)]="product.price" />
+      </div>
+  
+      <div class="form-group">
+        <label>Stock</label>
+        <input type="number" [(ngModel)]="product.stock" />
+      </div>
+  
+      <div class="form-group">
+        <label>Status</label>
+        <select [(ngModel)]="product.status">
+          <option>Available</option>
+          <option>Out of Stock</option>
+          <option>Limited</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label>Description</label>
+        <textarea [(ngModel)]="product.description"></textarea>
+      </div>
+  
+      <div class="form-actions">
+        <button class="save-btn" (click)="save()">Save</button>
+        <button class="cancel-btn" (click)="cancel()">Back</button>
+      </div>
+  
+    </div>
+  
+    <ng-template #notFound>
+      <p>Product not found.</p>
+      <button (click)="cancel()">Back to List</button>
+    </ng-template>
+  
+  </div>
